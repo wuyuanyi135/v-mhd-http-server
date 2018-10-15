@@ -77,6 +77,7 @@ int KeyValueIterator(void *cls, enum MHD_ValueKind kind, const char *key, const 
 {
     cJSON_DetachItemFromObject((cJSON *)cls, key);
     cJSON_AddStringToObject((cJSON *)cls, key, value);
+    return MHD_YES;
 }
 static int param_handler(struct MHD_Connection *connection, const char *method)
 {
