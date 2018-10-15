@@ -75,6 +75,7 @@ static int files_handler(struct MHD_Connection *connection, const char *url)
 }
 int KeyValueIterator(void *cls, enum MHD_ValueKind kind, const char *key, const char *value)
 {
+    cJSON_DetachItemFromObject((cJSON *)cls, key);
     cJSON_AddStringToObject((cJSON *)cls, key, value);
 }
 static int param_handler(struct MHD_Connection *connection, const char *method)
