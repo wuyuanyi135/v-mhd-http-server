@@ -1,9 +1,10 @@
 CC=gcc
-CFLAGS=-I. -c
+CFLAGS=-I. -c -Os 
 
 LD=gcc
 LDFLAGS = -L/usr/local/lib
 execute: server
+	ls -l ./server
 	./server
 
 main.o: main.c

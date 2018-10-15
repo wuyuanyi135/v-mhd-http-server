@@ -102,7 +102,8 @@ static int param_handler(struct MHD_Connection *connection, const char *method)
     {
         struct MHD_HTTP_Header *pos;
         char *data = malloc(sz + 1);
-        fread(data, 1, sz, fp);
+        size_t copied_sz = fread(data, 1, sz, fp);
+
         cJSON *json = cJSON_Parse(data);
         free(data);
         MHD_get_connection_values(connection, MHD_GET_ARGUMENT_KIND, KeyValueIterator, (void *)json);
