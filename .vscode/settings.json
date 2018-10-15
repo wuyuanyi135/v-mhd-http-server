@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "microhttpd.h": "c",
+        "cjson.h": "c"
+    }
+}

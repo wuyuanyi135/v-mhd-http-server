@@ -1,0 +1,44 @@
+.form div {
+    height: 50px;
+}
+
+.btn {
+    width: 40%;
+    margin: auto;
+}
+
+body {
+    width: 100%;
+}
+
+#form-container {
+    background-color: #fafafa;
+    margin:auto;
+    border-color: red;
+    border-style: double;
+    text-align: center;
+    width:30%;
+    padding: 30px;
+}
+#result-outlet {
+    margin: 20px;
+}
+#result-outlet > div {
+    margin: 5px 0px;
+}
+tr td:first-child {
+    text-align: right;
+    width: 50%;
+}
+tr td:nth-child(2) {
+    text-align: left;
+}
+
+.form-table {
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
